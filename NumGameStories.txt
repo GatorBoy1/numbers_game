@@ -1,0 +1,19 @@
+>Numbers Story
+
+
+>Welcome to game statement with input players name.
+
+>States game rules and; "#{name} begin play".
+.
+>AI selects random Num between 1-100, allows 10 guesses.
+
+>Player enters his guessed number.
+
+>Show guess is; high/low/equals.
+
+>If guess wrong, prompt; guesses remaining, & next guess.
+
+>If guess accurate, statement; "You win"
+
+>If wrong guesses exceed 10, statement; "You loose"
+
