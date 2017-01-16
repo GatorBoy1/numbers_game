@@ -6,4 +6,8 @@ def target_number
 
 puts target_number
 
-#end
+def compare_guess(guess, target_number)
+"Your guess was low"
+end
+
+

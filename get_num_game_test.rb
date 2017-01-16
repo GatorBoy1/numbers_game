@@ -1,19 +1,21 @@
 require "minitest/autorun"
 require_relative "get_num_game_func.rb"
 
- class TestMinedMindsFunction <Minitest::Test
+ class TestNumberGameFunction <Minitest::Test
   
    def test_if_randomizer_yields_number
         
         assert_includes(1..100,target_number)
+      end
+
+    def test_guess_true_or_false
+        target_number=20
+        guess=15
+        #assert_equal(("ur guess was low"), compare_guess, guess)
+        assert_equal("Your guess was low", compare_guess(guess, target_number))
 
 	end
-
 end
 
 
 
-#def test_fill_in_values
- #   assert_equal 2, 1 + 1
- # end
-#end
