@@ -3,6 +3,8 @@ require 'sinatra'
 require_relative "get_num_game_func.rb"
 target = target_number
 rounds = 10
+results = ""
+guess = nil
 
     get '/'do
         erb :get_name
@@ -15,7 +17,7 @@ rounds = 10
 
     get '/guess' do
         name = params[:user_name].capitalize
-        erb:get_number, :locals =>{:name => name}
+        erb:get_number, :locals =>{:name => name, :rounds => rounds, :results => results, :guess => guess}
     end
 
     post '/guess' do
@@ -24,9 +26,11 @@ rounds = 10
         results = compare_guess(guess, target)
         rounds = guess_counter(rounds)
         if results =="correct"
-            "that is correct"
+            "#{name} your guess, #{guess} was correct"
+            elsif rounds == 0
+                "you have used all of your guesses. The number was #{target}."
             else
-                results
+                erb :get_number, :locals =>{:name => name, :rounds => rounds, :results => results, :guess => guess}
         end #if
     end #post
 
