@@ -26,7 +26,7 @@ def test_guess_was_high
 def test_guess_was_correct
         target_number=20
         guess=20
-        assert_equal("Your guess was correct", compare_guess(guess, target_number))
+        assert_equal("correct", compare_guess(guess, target_number))
 
 	end
 def test_guess_count_return_8

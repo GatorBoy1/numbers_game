@@ -12,7 +12,7 @@ def target_number
         elsif guess.to_i > target_number.to_i
               "Your guess was high"
         else
-            "Your guess was correct"
+            "correct"
                 end #if
         
  end # compare_guess
