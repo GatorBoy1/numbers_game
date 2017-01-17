@@ -1,0 +1,11 @@
+Hello <%=name%>.<br>
+I have a number between 1 and 100.<br>
+Do you think you can guess what it is in 10 tries?
+<br><br><br>
+Enter your guess
+
+<form method = "post" action ="/guess">
+    <input type ="number" name = "guess" autofocus>
+    <input type = "text" name = "user_name" value = <%=name%> hidden>
+    <input type = "submit">
+</form>
