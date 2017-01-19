@@ -1,10 +1,10 @@
 >Numbers Story
 
 
->Welcome to game statement with input players name.
+>"Welcome to game" statement, and ask player to input name.
 
->States game rules and; "#{name} begin play".
-.
+>State game rules and; "#{name} begin play".
+
 >AI selects random Num between 1-100, allows 10 guesses.
 
 >Player enters his guessed number.
