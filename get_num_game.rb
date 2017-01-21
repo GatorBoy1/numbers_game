@@ -38,6 +38,7 @@ elsif guess == target
 	puts "Good job, #{name}!"
 	puts "You guessed my number in #{num_guesses} guesses!"
 	guessed_it = true
+	
  end
 
 end

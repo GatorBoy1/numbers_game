@@ -1,4 +1,7 @@
 #get_num_game_function.rb
+
+
+
 def target_number
 
     rand(100) + 1

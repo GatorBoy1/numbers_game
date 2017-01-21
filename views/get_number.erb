@@ -1,13 +1,20 @@
-Hello <%=name%>.<br>
-I have a number between 1 and 100.<br>
-Do you think you can guess what it is in 10 tries?
+<center> Hello <%=name%>.</center><br>
+<center>I have a number between 1 and 100.</center><br>
+<center>Do you think you can guess what it is in 10 tries?</center>
 <br><br><br>
-Your last guess of <%=guess%> <%=results%><br>
-You have <%=rounds%> guesses left
-Enter your guess
 
+<center>
+    <img class="sizeimage" align="middle" src="/img/10.jpg">
+      </img>
+</center>
+
+
+<center><strong>Your last guess was: <%=guess%> <%=results%></strong></center><br>
+<center>You have <%=rounds%> guesses left
+Enter your guess</center>
+<center>
 <form method = "post" action ="/guess">
     <input type ="number" name = "guess" autofocus>
     <input type = "text" name = "user_name" value = <%=name%> hidden>
     <input type = "submit">
-</form>
+</form> </center>
