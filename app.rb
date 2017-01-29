@@ -56,7 +56,8 @@ end # play again
             name = params[:name]            
             play_again
             elsif rounds == 0
-                "you have used all of your guesses. The number was #{target}."
+                erb :sorry, :locals => {:name => name, :target => target}
+
             else
                 erb :get_number, :locals => {:name => name, :rounds => rounds, :results => results, :guess => guess}
         end #if
