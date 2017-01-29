@@ -1,4 +1,3 @@
-"Sorry <%=name%>, you have used all of your guesses. The number was #{target}."
 <center>Sorry <%=name%>, you have used all of your guesses. The number was <%= target%>.</center>
 <br><br>
 
@@ -12,9 +11,10 @@ style="height:15rem; width:25rem; border: 6px solid #4682b4;"/></center>
 <center>
 
  <form method ="post" action ="/play_again">
-    <input type ="text" name ="playagain" style ="text_transform:uppercase" autofocus>
-    <input type = "text" name = "user_name" value = <%=name%> hidden>
-    <input type = "submit">
+    <!--input type ="text" name ="playagain" style ="text_transform:uppercase" autofocus/>
+    <input type = "text" name = "user_name" value = <%=name%> hidden/>
+    <input type = "submit" class = "continue" value = like  -->
+    <button type="submit" class="CONTINUE" name="foo" value="bar">CONTINUE</button>
 </form>
 
 </center>
