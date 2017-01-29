@@ -1,22 +1,16 @@
 # app.rb
 require 'sinatra'
 require_relative "get_num_game_func.rb"
-target = target_number
+target = target_number 
 rounds = 10
 results = ""
 guess = nil
-def reset
-    target = target_number
-    rounds = 10
-    results = ""
-    guess = nil
-end #reset
-    puts target
+
     get '/'do
         target = target_number
-    rounds = 10
-    results = ""
-    guess = nil
+        rounds = 10
+        results = ""
+        guess = nil
         erb :get_name
     end
     post '/users_name' do
@@ -37,39 +31,44 @@ end #reset
             guess = params[:guess]
             erb :correct_guess, :locals =>{ :name => name,  :guess => guess}
             elsif rounds == 0
-                erb :sorry, :locals => {:name => name, :target => target}
-                
+                redirect '/sorry'
+
+
             else
                 erb :get_number, :locals => {:name => name, :rounds => rounds, :results => results, :guess => guess}
         end #if
         
     end # post
+
+    get '/sorry' do
+        name = params[:user_name]
+        erb :sorry, :locals => {:name => name, :target => target}
+    end
+
+    post '/continue' do
+        redirect '/playchoice'
+       # erb :yo
+    end
+
     post '/playchoice' do
-             # name = params[:user_name].capitalize
+        puts "\a \a\a"
+
               choice = params[:input_playchoice].capitalize
-              reset # call here to reset options for new game.
+
         if choice == "Y"
-           # erb:play_again, :locals => {:name => name, :rounds => rounds, :results => results, :guess => guess}
-            redirect "/"
+            name = params[:user_name]
+            redirect '/'
         else
             erb :thank_you, :locals => {:name => name}
         end
                 
-                #'/replay?user_name=' + name
      end
      get '/replay' do
         name = params[:user_name].capitalize
         erb :play_again, :locals =>{:name => name}
     end
    
-    # post '/replay' do
-    #     name = params[:user_name].capitalize
-    #     play_again = params[:play_again]
-    #     # if play_again == "n"
-    #     # #     play = no
-    #     #     "good bye"
-    #     #  end #if
-    #     end #post
+
     post'/replay' do
         "hello world"
      end
