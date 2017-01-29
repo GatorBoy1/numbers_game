@@ -1,0 +1,25 @@
+
+<center>
+ "<em>Congratulations!"</em> <br>
+ "Your guess of:<strong> <%=guess%> </strong>was correct!"
+</center>
+
+<center><img src="/img/hun.jpeg"; 
+style="height:15rem; width:25rem;"/></center>
+
+<center>
+
+
+"Thanks for playing <%=name%>! <br>
+"Play again? Y/N "
+
+
+
+ <form playchoice = "playchoice_form" class = "form_box" method = "post" action = "/playchoice">
+	<input type="text" name="input_playchoice">
+    <input type="hidden" name = "user_name" value = "<%= name %>">
+	<input type= "submit">
+</form>
+
+</center>
+
