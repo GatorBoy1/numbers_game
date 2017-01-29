@@ -63,12 +63,3 @@ guess = nil
         end
                 
      end
-     get '/replay' do
-        name = params[:user_name].capitalize
-        erb :play_again, :locals =>{:name => name}
-    end
-   
-
-    post'/replay' do
-        "hello world"
-     end
