@@ -53,7 +53,7 @@ guess = nil
     post '/playchoice' do
         puts "\a \a\a"
 
-              choice = params[:input_playchoice].capitalize
+              choice = params[:input_playchoice]
 
         if choice == "Y"
             name = params[:user_name]

@@ -4,22 +4,29 @@
  "Your guess of:<strong> <%=guess%> </strong>was correct!"
 </center>
 
-<center><img src="/img/hun.jpeg"; 
-style="height:15rem; width:25rem;"/></center>
+<center><img src="/img/celebrate.jpg"; 
+style="height:20rem; width:30rem; border: 8px solid #4682b4;"/></center>
 
 <center>
 
-
 "Thanks for playing <%=name%>! <br>
-"Play again? Y/N "
+"Would you like to play again?"
+
+  <!--<form playchoice = "playchoice_form" method = "post" action = "/playchoice">
+  <input type="radio" name="input_playchoice" value="Y">YES<br>
+  <input type="radio" name="input_playchoice" value="N"> NO<br>
+ </form> -->
+
+<p><b>Note:</b> This game was created by:Lyle Sanders and Don Kingery<br>Collaboration was 
+recieved from: (Lotfi Bechouck, John Carr and Ysabelle Bombardier)<br>
+Directed and Supervised by:<a href="http://www.minedminds.org/">Mined Minds</a> </p>
 
 
-
- <form playchoice = "playchoice_form" class = "form_box" method = "post" action = "/playchoice">
+<form playchoice = "playchoice_form" class = "form_box" method = "post" action = "/playchoice">
 	<input type="text" name="input_playchoice">
     <input type="hidden" name = "user_name" value = "<%= name %>">
 	<input type= "submit">
-</form>
-
+</form> 
 </center>
+
 
