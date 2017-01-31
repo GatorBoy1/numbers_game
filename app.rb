@@ -46,14 +46,13 @@ guess = nil
     end
 
     post '/continue' do
-        redirect '/playchoice'
+        redirect '/'
        # erb :yo
     end
 
     post '/playchoice' do
-        puts "\a \a\a"
-
-              choice = params[:input_playchoice]
+        
+              choice = params[:input_playchoice].capitalize
 
         if choice == "Y"
             name = params[:user_name]
