@@ -52,7 +52,7 @@ guess = nil
 
     post '/playchoice' do
  puts"\a\a\a\a"    #THis line tells me that this block has been started.   
-              choice = params[:input_playchoice]
+              choice = params[:continue]
 puts "\v ******************#{choice}************************\v" # this line lets me view the input value returned from erb file
 # if erb uses a text box then the input is returned if it uses a button nothing is returned
         if choice == "Y"

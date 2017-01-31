@@ -22,3 +22,7 @@ def target_number
      def guess_counter(guess_count)
             guess_count =guess_count-1
      end
+
+def duplicate_guess?(guess)
+
+end #duplicate_guess
