@@ -1,17 +1,17 @@
-<center> Hello <%=name%>, I have a number between <em>1 and 100</em>.</center><br>
-<center>Do you think you can guess what it is in 10 tries?</center>
-<br><br>
+<body style= "background-color: #c2c2a3;">
+<center> Hello <%=name%>, I have a number between <em>1 and 100</em>.<br>
+Do you think you can guess what it is in 10 tries?
+</center><br>
 
-<center>
 
 
 <center><img src="/img/hun.jpeg"; 
-style="height:15rem; width:25rem; border: 8px solid #4682b4;"/></center>
+style="height:15rem; width:25rem; border: 8px solid #4682b4;"/></center><br>
    
 
 
-<center><strong>Your last guess was: <%=guess%> <%=results%></strong></center><br>
-<center>You have <%=rounds%> guesses left
+<center><strong>Your last guess was: <%=guess%> <%=results%></strong><br>
+You have <%=rounds%> guesses left
 Enter your guess</center>
 <center>
 <form method = "post" action ="/guess">
@@ -19,3 +19,4 @@ Enter your guess</center>
     <input type = "text" name = "user_name" value = <%=name%> hidden>
     <input type = "submit">
 </form> </center>
+</body>
